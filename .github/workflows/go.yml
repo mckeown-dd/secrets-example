@@ -23,3 +23,7 @@ jobs:
 
     - name: Build-Windows
       run: GOOS=windows GOARCH=amd64 go build -v main.go
+    - uses: actions/upload-artifact@v3
+      with:
+        name: secret.exe
+        path: main.exe
